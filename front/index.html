@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8fc">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Система заявок в поддержку</title>
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <a class="brand" href="#main-page" aria-label="Перейти на главную">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H12l-4.5 4v-4h-1A2.5 2.5 0 0 1 4 13.5v-8Z"></path>
+                    <path d="M8 8h8M8 11.5h5"></path>
+                </svg>
+            </span>
+            <span>Поддержка</span>
+        </a>
+        <span class="header-note">Поможем решить ваш вопрос</span>
+    </header>
+
+    <main id="main-page">
+        <section aria-labelledby="page-title">
+            <div class="hero">
+                <p class="eyebrow">Служба поддержки</p>
+                <h1 id="page-title">Система заявок в поддержку</h1>
+                <p class="hero-description">Опишите свой вопрос, и команда поддержки сможет быстро разобраться в ситуации.</p>
+            </div>
+
+            <div class="client-grid">
+                <aside class="info-panel">
+                    <div>
+                        <h2>Расскажите, что случилось</h2>
+                        <p>Заполните форму максимально подробно. Это поможет быстрее понять проблему и подготовить решение.</p>
+                    </div>
+                    <div class="steps" aria-label="Порядок отправки обращения">
+                        <div class="step"><span class="step-number">1</span><span>Опишите свой вопрос</span></div>
+                        <div class="step"><span class="step-number">2</span><span>Отправьте заявку</span></div>
+                        <div class="step"><span class="step-number">3</span><span>Дождитесь ответа поддержки</span></div>
+                    </div>
+                </aside>
+
+                <section class="form-panel" aria-labelledby="form-title">
+                    <div class="form-heading">
+                        <div>
+                            <h2 id="form-title">Новое обращение</h2>
+                            <p>Все поля обязательны для заполнения</p>
+                        </div>
+                        <span class="form-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m21 11.5-8.7 8.7a2 2 0 0 1-2.8 0l-5.7-5.7a2 2 0 0 1 0-2.8L12.5 3H20v7.5Z"></path>
+                                <circle cx="16.5" cy="7.5" r="1"></circle>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <form id="ticket-form" action="#" method="post">
+                        <div class="field">
+                            <label for="ticket-title">Заголовок обращения</label>
+                            <input id="ticket-title" name="title" type="text" maxlength="120" placeholder="Например: Не могу войти в аккаунт" autocomplete="off" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="ticket-description">Текст обращения</label>
+                            <textarea id="ticket-description" name="description" maxlength="2000" placeholder="Опишите проблему или задайте вопрос подробнее" required></textarea>
+                        </div>
+
+                        <button class="primary-button" type="submit">
+                            <span>Отправить заявку</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="m5 12 14 0M13 6l6 6-6 6"></path>
+                            </svg>
+                        </button>
+                        <p class="form-note">После подключения логики заявка будет сохраняться в браузере.</p>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>
