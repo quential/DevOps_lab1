@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8fc">
+    <link rel="stylesheet" href="css/admin.css">
+    <title>Админ панель — Система заявок в поддержку</title>
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <a class="brand" href="index.html" aria-label="Вернуться к форме обращения">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H12l-4.5 4v-4h-1A2.5 2.5 0 0 1 4 13.5v-8Z"></path>
+                    <path d="M8 8h8M8 11.5h5"></path>
+                </svg>
+            </span>
+            <span>Поддержка</span>
+        </a>
+
+        <a class="back-link" href="index.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M11 18l-6-6 6-6"></path>
+            </svg>
+            <span>Вернуться к форме</span>
+        </a>
+    </header>
+
+    <main>
+        <section class="admin-heading" aria-labelledby="admin-title">
+            <div>
+                <p class="eyebrow">Управление обращениями</p>
+                <h1 id="admin-title">Админ панель</h1>
+                <p class="heading-description">Здесь отображаются все заявки, отправленные пользователями.</p>
+            </div>
+
+            <div class="summary-card" aria-label="Количество заявок">
+                <span class="summary-label">Всего заявок</span>
+                <strong id="ticket-count">0</strong>
+            </div>
+        </section>
+
+        <section class="tickets-section" aria-labelledby="tickets-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="tickets-title">Все заявки</h2>
+                    <p>Управляйте статусами обращений</p>
+                </div>
+
+                <div class="status-legend" aria-label="Статусы заявок">
+                    <span class="legend-item"><i class="status-dot status-dot-new"></i>Новая</span>
+                    <span class="legend-item"><i class="status-dot status-dot-rejected"></i>Отклонена</span>
+                    <span class="legend-item"><i class="status-dot status-dot-resolved"></i>Решена</span>
+                </div>
+            </div>
+
+            <div class="empty-state" id="tickets-empty">
+                <div class="empty-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 5.5A2.5 2.5 0 0 1 7.5 3h9A2.5 2.5 0 0 1 19 5.5v7a2.5 2.5 0 0 1-2.5 2.5H12l-4 4v-4H7.5A2.5 2.5 0 0 1 5 12.5v-7Z"></path>
+                        <path d="M8.5 7.5h7M8.5 10.5h4"></path>
+                    </svg>
+                </div>
+                <h3>Заявок пока нет</h3>
+                <p>Новые обращения появятся здесь после отправки формы.</p>
+            </div>
+
+            <div class="tickets-list" id="tickets-list" aria-live="polite"></div>
+        </section>
+    </main>
+</div>
+
+<template id="ticket-card-template">
+    <article class="ticket-card status-new">
+        <span class="status-strip" aria-hidden="true"></span>
+        <div class="ticket-content">
+            <div class="ticket-meta">
+                <span class="status-label">Новая заявка</span>
+                <time class="ticket-date"></time>
+            </div>
+            <h3 class="ticket-title"></h3>
+            <p class="ticket-description"></p>
+            <div class="ticket-actions">
+                <button class="action-button reject-button" type="button">Отклонить</button>
+                <button class="action-button resolve-button" type="button">Решить</button>
+            </div>
+        </div>
+    </article>
+</template>
+</body>
+</html>
